@@ -1,9 +1,9 @@
-class employee:
+class employer:
     payroll = 0
     def calculate_payroll(self):
         pass
 
-class hourlyemployee(employee):
+class hourlyemployer(employer):
     hourlyRate = 0
     def __init__(self, rate):
         self.hourlyRate = rate
@@ -12,7 +12,7 @@ class hourlyemployee(employee):
     def print_info(self):
         print(self.payroll)
 
-class fixedTermemployee(employee):
+class fixedTermemployer(employer):
     salary = 0
     def __init__(self, salary):
         self.salary = salary
@@ -22,9 +22,9 @@ class fixedTermemployee(employee):
         print(self.payroll)
 
 
-Vasya = hourlyemployee(2)
+Vasya = hourlyemployer(int(input("Ввидите почасовую ставку: ")))
 Vasya.calculate_payroll()
 Vasya.print_info()
-Pit = fixedTermemployee(2400)
+Pit = fixedTermemployer(int(input("Ввидите фиксированную зарплату: ")))
 Pit.calculate_payroll()
 Pit.print_info()
