@@ -9,7 +9,7 @@ class Predator(Animal):
     def bit(self, victim):
         if(isinstance(victim,Mammal)== True):
             victim.die()
-        print(self.name,"have eated",victim.name)
+        print(self.name,"have eated",victim)
 class Tiger(Predator):
     pass
 class Mammal(Animal):
